@@ -9,26 +9,27 @@
         </div>
     </form>
     <div class="ui articles cards">
-        <div class="card">
+        <div class="card" ng-repeat="article in vm.articlesList">
             <div class="image">
-                <img src="/images/avatar2/large/matthew.png">
+                <img ng-src="{{article.lead_image_url}}">
             </div>
             <div class="content">
-                <div class="header">Matt Giampietro</div>
+                <div class="header">{{article.title}}</div>
                 <div class="meta">
-                    <a>Friends</a>
+                    <a ng-href="{{article.short_url}}" target="_blank">
+                        {{article.url}} 
+                        <i class="external icon"></i>
+                    </a>
                 </div>
                 <div class="description">
-                    Matthew is an interior designer living in New York.
+                    {{article.excerpt}}
                 </div>
             </div>
             <div class="extra content">
                 <span class="right floated">
-                    Joined in 2013
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    75 Friends
+                    <button class="ui icon teal tiny button">
+                        View Content
+                    </button>
                 </span>
             </div>
         </div>

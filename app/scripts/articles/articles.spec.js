@@ -18,7 +18,7 @@ describe('ArticlesController', function() {
     it('should add a new article', function() {
         var scope = angular;
 
-        scope.addArticle('http://www.google.ca');
+        scope.addArticle('http://www.google.com');
         expect(scope.articles.length).to.equal(scope.articles.length+1);
     });
 
