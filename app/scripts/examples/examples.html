@@ -1,6 +1,6 @@
 <h2>Examples</h2>
 <div class="ui articles cards">
-    <div class="card" ng-repeat="article in vm.articlesList">
+    <div class="card" ng-repeat="article in vm.examplesList">
         <div class="image">
             <img ng-src="{{article.lead_image_url}}">
         </div>
@@ -18,7 +18,7 @@
         </div>
         <div class="extra content">
             <span class="right floated">
-                <button class="ui icon teal tiny button">
+                <button ng-click="vm.saveArticle(article)" class="ui icon green tiny button">
                     Save Article
                 </button>
             </span>

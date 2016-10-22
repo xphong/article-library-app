@@ -5,15 +5,21 @@
         .module('controllers.Examples', [])
         .controller('ExamplesController', ExamplesController);
 
-    ExamplesController.$inject = ['ArticlesService'];
+    ExamplesController.$inject = ['ExamplesService', 'ArticlesService'];
 
-    function ExamplesController (ArticlesService) {
+    function ExamplesController (ExamplesService, ArticlesService) {
         var vm = this;
 
-        vm.articlesList = ArticlesService.getArticles();
-        
-        vm.addArticle = function (response) {
-            ArticlesService.addArticle(response.data);
+        ExamplesService.getArticles()
+            .then(setArticles);
+
+        vm.saveArticle = function (article) {
+            ArticlesService.addArticle(article);
+            alert('Article saved');
+        }
+
+        function setArticles (response) {
+            vm.examplesList = response.data;
         }
     }
 
