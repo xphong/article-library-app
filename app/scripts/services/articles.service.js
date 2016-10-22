@@ -23,7 +23,7 @@
         }
 
         function addArticle (article) {
-            articlesList.push(article);
+            articlesList.unshift(article);
             return articlesList;
         }
 
