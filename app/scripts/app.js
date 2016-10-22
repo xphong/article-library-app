@@ -5,7 +5,6 @@
         'MainRouter',
         'angular-loading-bar',
 
-        'controllers.Auth',
         'controllers.Articles',
         'controllers.ArticleContent',
 
