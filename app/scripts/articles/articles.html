@@ -1,37 +1,40 @@
-<div class="ui container">
-    <h2>Articles List</h2>
-    <form ng-submit="vm.addArticle()">
-        <div class="ui action input">
-            <input ng-model="vm.articleUrl" type="url" placeholder="http://..." required>
-            <button class="ui icon pink button">
-                <i class="add icon"></i>
-            </button>
+<h2>Articles List</h2>
+<form ng-submit="vm.addArticle()">
+    <div class="ui action input">
+        <input ng-model="vm.articleUrl" type="url" placeholder="http://..." required>
+        <button class="ui icon pink button">
+            <i class="add icon"></i>
+        </button>
+    </div>
+</form>
+<div ng-if="!vm.articlesList.length">
+    <h4 class="empty header">List is currently empty. Add article url to view articles.</h4>
+</div>
+<div class="ui articles cards">
+    <div class="card" ng-repeat="article in vm.articlesList">
+        <div class="image">
+            <img ng-src="{{article.lead_image_url}}">
         </div>
-    </form>
-    <div class="ui articles cards">
-        <div class="card" ng-repeat="article in vm.articlesList">
-            <div class="image">
-                <img ng-src="{{article.lead_image_url}}">
+        <div class="content">
+            <div class="header">{{article.title}}</div>
+            <div class="meta">
+                <a ng-href="{{article.short_url}}" target="_blank">
+                    {{article.url}} 
+                    <i class="external icon"></i>
+                </a>
             </div>
-            <div class="content">
-                <div class="header">{{article.title}}</div>
-                <div class="meta">
-                    <a ng-href="{{article.short_url}}" target="_blank">
-                        {{article.url}} 
-                        <i class="external icon"></i>
-                    </a>
-                </div>
-                <div class="description">
-                    {{article.excerpt}}
-                </div>
+            <div class="description">
+                {{article.excerpt}}
             </div>
-            <div class="extra content">
-                <span class="right floated">
+        </div>
+        <div class="extra content">
+            <span class="right floated">
+                <a ng-href="#/article-content/{{$index}}">
                     <button class="ui icon teal tiny button">
                         View Content
                     </button>
-                </span>
-            </div>
+                </a>
+            </span>
         </div>
     </div>
 </div>

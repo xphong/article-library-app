@@ -10,6 +10,7 @@
     function ArticlesService ($http, Constants) {
         var service = {
             getArticles: getArticles,
+            getArticleById: getArticleById,
             addArticle: addArticle,
             fetchArticle: fetchArticle
         };
@@ -20,6 +21,10 @@
 
         function getArticles () {
             return articlesList;
+        }
+
+        function getArticleById (id) {
+            return articlesList[id];
         }
 
         function addArticle (article) {

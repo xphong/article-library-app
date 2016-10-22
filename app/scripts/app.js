@@ -7,6 +7,7 @@
 
         'controllers.Auth',
         'controllers.Articles',
+        'controllers.ArticleContent',
 
         'services.Interceptor',
         'services.Articles'

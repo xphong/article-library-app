@@ -10,6 +10,12 @@
                     controller: 'ArticlesController',
                     controllerAs: 'vm'
                 }).
+                when('/article-content/:id', {
+                    templateUrl: 'scripts/article-content/article-content.html',
+                    controller: 'ArticleContentController',
+                    controllerAs: 'vm'
+                }).
+
                 when('/login', {
                     templateUrl: 'partials/auth.html',
                     controller: 'AuthCtrl',

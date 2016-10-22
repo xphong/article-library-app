@@ -20,7 +20,7 @@
         }
 
         function addNewArticle (response) {
-            if (response.data) {
+            if (response && response.data) {
                 vm.articlesList = ArticlesService.addArticle(response.data);
             }
         }
