@@ -10,7 +10,8 @@
         'controllers.Examples',
 
         'services.Interceptor',
-        'services.Articles'
+        'services.Articles',
+        'services.Examples'
     ]);
 
     app.constant('Constants', {
