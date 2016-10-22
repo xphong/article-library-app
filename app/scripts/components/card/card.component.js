@@ -5,7 +5,8 @@
         .module('components.Card', [])
         .component('alCard', {
             bindings: {
-                article: '='
+                article: '=',
+                index: '@'
             },
             templateUrl: '/scripts/components/card/card.html',
             controller: CardComponentController

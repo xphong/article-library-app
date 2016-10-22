@@ -11,6 +11,6 @@
     <h4 class="empty header">List is currently empty. Add article url to view articles.</h4>
 </div>
 <div class="ui articles cards">
-    <al-card class="card" ng-repeat="article in vm.articlesList" article="article">
+    <al-card class="card" ng-repeat="article in vm.articlesList" article="article" index="{{$index}}">
     </al-card>
 </div>
