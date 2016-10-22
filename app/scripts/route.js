@@ -15,10 +15,9 @@
                     controller: 'ArticleContentController',
                     controllerAs: 'vm'
                 }).
-
-                when('/login', {
-                    templateUrl: 'partials/auth.html',
-                    controller: 'AuthCtrl',
+                when('/examples', {
+                    templateUrl: 'scripts/examples/examples.html',
+                    controller: 'ExamplesController',
                     controllerAs: 'vm'
                 }).
                 otherwise({

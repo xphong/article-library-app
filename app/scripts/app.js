@@ -7,6 +7,7 @@
 
         'controllers.Articles',
         'controllers.ArticleContent',
+        'controllers.Examples',
 
         'services.Interceptor',
         'services.Articles'
