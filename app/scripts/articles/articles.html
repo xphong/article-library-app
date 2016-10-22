@@ -1,11 +1,13 @@
 <div class="ui">
   <h2>Articles List</h2>
-  <div class="ui action input">
-    <input type="text" placeholder="http://...">
-    <button class="ui icon button">
-      <i class="add icon"></i>
-    </button>
-  </div>
+  <form ng-submit="vm.addArticle()">
+    <div class="ui action input">
+      <input type="text" placeholder="http://...">
+      <button class="ui icon pink button">
+        <i class="add icon"></i>
+      </button>
+    </div>
+  </form>
   <div class="ui articles cards">
     <div class="card">
       <div class="image">

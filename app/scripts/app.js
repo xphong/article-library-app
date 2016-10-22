@@ -10,7 +10,8 @@
     ]);
 
     app.constant('Constants', {
-        baseUrl: 'https://api.github.com'
+        baseUrl: 'https://www.readability.com/developers/api/parser',
+        apiKey: '4f33c9ffe2498d61d48d2fda02cd14f9c38b40b6'
     });
 
     app.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
