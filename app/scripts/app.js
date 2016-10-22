@@ -6,11 +6,13 @@
         'angular-loading-bar',
 
         'controllers.Auth',
-        'controllers.Articles'
+        'controllers.Articles',
+
+        'services.Articles'
     ]);
 
     app.constant('Constants', {
-        baseUrl: 'https://www.readability.com/developers/api/parser',
+        baseUrl: 'https://readability.com/api/content/v1/parser',
         apiKey: '4f33c9ffe2498d61d48d2fda02cd14f9c38b40b6'
     });
 
