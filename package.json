@@ -4,7 +4,7 @@
     "node": ">=4.2.1"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha scripts/**/**.spec.js"
+    "test": "./node_modules/.bin/mocha app/scripts/**/*.spec.js"
   },
   "devDependencies": {
     "connect": "3.4.0",

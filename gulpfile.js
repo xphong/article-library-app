@@ -64,7 +64,7 @@ gulp.task('extras', function () {
 gulp.task('webdriver', $.protractor.webdriver_standalone);
 
 gulp.task('e2e', function () {
-    gulp.src(['./scripts/**/*.e2e.js'])
+    gulp.src(['app/scripts/**/*.e2e.js'])
       .pipe($.protractor.protractor({
         configFile: 'tests/protractor.conf.js',
         args: ['--baseUrl', 'http://127.0.0.1:8000'],
