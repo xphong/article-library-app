@@ -5,12 +5,13 @@
         .module('services.Articles', [])
         .factory('ArticlesService', ArticlesService);
 
-    ArticlesService.$inject = ['$http'];
+    ArticlesService.$inject = ['$http', 'Constants'];
 
-    function ArticlesService ($http) {
+    function ArticlesService ($http, Constants) {
         var service = {
             getArticles: getArticles,
-            addArticle: addArticle
+            addArticle: addArticle,
+            fetchArticle: fetchArticle
         };
 
         var articlesList = [];
@@ -21,8 +22,14 @@
             return articlesList;
         }
 
-        function addArticle (url) {
-            return url;
+        function addArticle (article) {
+            articlesList.push(article);
+            return articlesList;
+        }
+
+        function fetchArticle (articleUrl) {
+            var url = Constants.baseUrl + '?url=' + articleUrl + '&token=' + Constants.apiKey;
+            return $http.get(url);
         }
     }
 
