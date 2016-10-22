@@ -5,7 +5,8 @@
         'MainRouter',
         'angular-loading-bar',
 
-        'controllers.Auth'
+        'controllers.Auth',
+        'controllers.Articles'
     ]);
 
     app.constant('Constants', {
