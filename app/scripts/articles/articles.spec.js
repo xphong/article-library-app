@@ -7,19 +7,24 @@ angular = {
 };
 
 var expect = require('chai').expect;
-require ('../../app/scripts/articles/ArticlesController');
+require ('./articles.controller.js');
 
 
 describe('ArticlesController', function() {
-    beforeEach( function () {
+    beforeEach(function () {
         angular.ArticlesController();
+    });
+
+    it('should have empty articles list', function() {
+        var scope = angular;
+
+        expect(scope.articlesList.length).to.equal(0);
     });
 
     it('should add a new article', function() {
         var scope = angular;
 
         scope.addArticle('http://www.google.com');
-        expect(scope.articles.length).to.equal(scope.articles.length+1);
+        expect(scope.articlesList.length).to.equal(scope.articlesList.length+1);
     });
-
 });
