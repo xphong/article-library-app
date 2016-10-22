@@ -2,7 +2,7 @@
     <h2>Articles List</h2>
     <form ng-submit="vm.addArticle()">
         <div class="ui action input">
-            <input type="text" placeholder="http://...">
+            <input ng-model="vm.articleUrl" type="url" placeholder="http://..." required>
             <button class="ui icon pink button">
                 <i class="add icon"></i>
             </button>
