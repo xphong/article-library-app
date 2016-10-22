@@ -1,27 +1,5 @@
 <h2>Examples</h2>
 <div class="ui articles cards">
-    <div class="card" ng-repeat="article in vm.examplesList">
-        <div class="image">
-            <img ng-src="{{article.lead_image_url}}">
-        </div>
-        <div class="content">
-            <div class="header">{{article.title}}</div>
-            <div class="meta">
-                <a ng-href="{{article.short_url}}" target="_blank">
-                    {{article.url}} 
-                    <i class="external icon"></i>
-                </a>
-            </div>
-            <div class="description">
-                {{article.excerpt}}
-            </div>
-        </div>
-        <div class="extra content">
-            <span class="right floated">
-                <button ng-click="vm.saveArticle(article)" class="ui icon green tiny button">
-                    Save Article
-                </button>
-            </span>
-        </div>
-    </div>
+    <al-card class="card" ng-repeat="article in vm.examplesList" article="article">
+    </al-card>
 </div>

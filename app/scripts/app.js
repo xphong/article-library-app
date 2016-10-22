@@ -11,7 +11,9 @@
 
         'services.Interceptor',
         'services.Articles',
-        'services.Examples'
+        'services.Examples',
+
+        'components.Card'
     ]);
 
     app.constant('Constants', {

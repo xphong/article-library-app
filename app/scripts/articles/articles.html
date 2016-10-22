@@ -11,30 +11,6 @@
     <h4 class="empty header">List is currently empty. Add article url to view articles.</h4>
 </div>
 <div class="ui articles cards">
-    <div class="card" ng-repeat="article in vm.articlesList">
-        <div class="image">
-            <img ng-src="{{article.lead_image_url}}">
-        </div>
-        <div class="content">
-            <div class="header">{{article.title}}</div>
-            <div class="meta">
-                <a ng-href="{{article.short_url}}" target="_blank">
-                    {{article.url}} 
-                    <i class="external icon"></i>
-                </a>
-            </div>
-            <div class="description">
-                {{article.excerpt}}
-            </div>
-        </div>
-        <div class="extra content">
-            <span class="right floated">
-                <a ng-href="#/article-content/{{$index}}">
-                    <button class="ui icon orange tiny button">
-                        View Content
-                    </button>
-                </a>
-            </span>
-        </div>
-    </div>
+    <al-card class="card" ng-repeat="article in vm.articlesList" article="article">
+    </al-card>
 </div>
