@@ -5,7 +5,9 @@
         .module('controllers.Articles', [])
         .controller('ArticlesController', ArticlesController);
 
-    function ArticlesController () {
+    ArticlesController.$inject = ['ArticlesService'];
+
+    function ArticlesController (ArticlesService) {
         var vm = this;
         
     }

@@ -7,7 +7,7 @@
 
     ArticlesService.$inject = ['$http'];
 
-    function ArticlesService () {
+    function ArticlesService ($http) {
         var service = {
             getArticles: getArticles,
             addArticle: addArticle
@@ -18,11 +18,11 @@
         return service;
 
         function getArticles () {
-            
+            return articlesList;
         }
 
         function addArticle (url) {
-            
+            return url;
         }
     }
 
