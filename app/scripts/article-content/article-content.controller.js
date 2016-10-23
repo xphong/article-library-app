@@ -9,7 +9,6 @@
 
     function ArticleContentController (ArticlesService, $routeParams, $sce) {
         var vm = this;
-
         var article = ArticlesService.getArticleById($routeParams.id);
 
         vm.articleContent = $sce.trustAsHtml(article.content);

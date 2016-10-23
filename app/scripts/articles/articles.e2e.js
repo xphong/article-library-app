@@ -25,5 +25,5 @@ describe('Articles test', function() {
         expect(element(firstRow.column('article.title')).getText()).toEqual('Google');
         expect(element(firstRow.column('article.url')).getText()).toEqual('http://Google.ca');
     });
-    
+
 });

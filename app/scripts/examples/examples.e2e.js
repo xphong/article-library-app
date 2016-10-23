@@ -15,5 +15,5 @@ describe('Examples test', function() {
         expect(element(firstRow.column('article.title')).getText()).toEqual('Google');
         expect(element(firstRow.column('article.url')).getText()).toEqual('http://www.google.com/');
     });
-    
+
 });

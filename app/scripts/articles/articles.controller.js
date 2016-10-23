@@ -11,8 +11,9 @@
         var vm = this;
 
         vm.articlesList = ArticlesService.getArticles();
-        
-        vm.addArticle = function () {
+        vm.addArticle = addArticle;
+
+        function addArticle () {
             if (vm.articleUrl) {
                 ArticlesService.fetchArticle(vm.articleUrl)
                     .then(addNewArticle);

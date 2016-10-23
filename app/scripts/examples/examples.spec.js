@@ -11,6 +11,7 @@ require ('./examples.controller.js');
 
 
 describe('ExamplesControler', function() {
+
     beforeEach(function () {
         angular.ExamplesControler();
     });

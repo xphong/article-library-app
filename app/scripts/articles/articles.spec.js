@@ -11,6 +11,7 @@ require ('./articles.controller.js');
 
 
 describe('ArticlesController', function() {
+
     beforeEach(function () {
         angular.ArticlesController();
     });
@@ -27,4 +28,5 @@ describe('ArticlesController', function() {
         scope.addArticle('http://www.google.com');
         expect(scope.articlesList.length).to.equal(scope.articlesList.length+1);
     });
+
 });

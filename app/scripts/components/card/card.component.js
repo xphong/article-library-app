@@ -9,7 +9,8 @@
                 index: '@'
             },
             templateUrl: '/scripts/components/card/card.html',
-            controller: CardComponentController
+            controller: CardComponentController,
+            controllerAs: 'vm'
         });
 
     CardComponentController.$inject = ['$location', 'ArticlesService'];
@@ -18,8 +19,9 @@
         var vm = this;
 
         vm.isExamplesPage = $location.path().indexOf('/examples') !== -1;
+        vm.saveArticle = saveArticle;
 
-        vm.saveArticle = function (article) {
+        function saveArticle (article) {
             ArticlesService.addArticle(article);
             alert('Article saved');
         }

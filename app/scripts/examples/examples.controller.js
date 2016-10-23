@@ -10,8 +10,12 @@
     function ExamplesController (ExamplesService, ArticlesService) {
         var vm = this;
 
-        ExamplesService.getArticles()
-            .then(setArticles);
+        init();
+
+        function init () {
+            ExamplesService.getArticles()
+                .then(setArticles);
+        }
 
         function setArticles (response) {
             vm.examplesList = response.data;
