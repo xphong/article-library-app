@@ -1,0 +1,2 @@
+app/scripts/**/*.spec.js
+app/scripts/**/*.e2e.js
